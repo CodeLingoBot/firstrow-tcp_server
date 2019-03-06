@@ -70,7 +70,7 @@ func (s *server) OnNewMessage(callback func(c *Client, message string)) {
 	s.onNewMessage = callback
 }
 
-// Start network server
+// Listen starts network server
 func (s *server) Listen() {
 	listener, err := net.Listen("tcp", s.address)
 	if err != nil {
